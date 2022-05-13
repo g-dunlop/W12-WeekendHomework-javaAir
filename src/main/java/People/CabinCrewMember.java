@@ -16,4 +16,8 @@ public class CabinCrewMember extends Person {
     public void setRankType(RankType rankType) {
         this.rankType = rankType;
     }
+
+    public String relayMessage(){
+        return "Fasten your seatbelts for landing";
+    }
 }

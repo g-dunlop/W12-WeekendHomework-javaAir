@@ -89,4 +89,37 @@ public class Flight {
     public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
     }
+
+    public int getNumberOfPassengers(){
+        return this.passengers.size();
+    }
+
+    public int getNumberOfCabinCrewMembers(){
+        return this.cabinCrew.size();
+    }
+
+    public int getNumberOfPilots(){
+        return this.pilots.size();
+    }
+
+    public int getNumberOfEmptySeats(){
+        int seats = this.plane.planeType.getCapacity();
+        return seats - this.passengers.size();
+    }
+
+    public void addPassengerToFlight(Passenger passenger){
+        if (getNumberOfEmptySeats() > 0 ) {
+            this.passengers.add(passenger);
+        }
+    }
+
+    public void addPilotToFlight(Pilot pilot){
+        this.pilots.add(pilot);
+    }
+
+    public void addCabinCrewMemberToFlight(CabinCrewMember cabinCrewMember){
+        this.cabinCrew.add(cabinCrewMember);
+    }
+
+
 }

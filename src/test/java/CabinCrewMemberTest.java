@@ -35,4 +35,9 @@ public class CabinCrewMemberTest {
         cabinCrewMember.setRankType(RankType.FLIGHT_ATTENDANT);
         assertEquals(RankType.FLIGHT_ATTENDANT, cabinCrewMember.getRankType());
     }
+
+    @Test
+    public void canRelayMessage(){
+        assertEquals("Fasten your seatbelts for landing", cabinCrewMember.relayMessage());
+    }
 }

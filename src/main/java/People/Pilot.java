@@ -26,4 +26,8 @@ public class Pilot extends Person {
     public void setRankType(RankType rankType) {
         this.rankType = rankType;
     }
+
+    public String fly(){
+        return "Welcome aboard!";
+    }
 }
